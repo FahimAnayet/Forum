@@ -24,4 +24,11 @@ Route::get('/jquery', function () {
 	return view('jquery');
 });
 
+Auth::routes();
+Route::group(['prefix' => 'forum'], function () {
+	Route::resources([
+		'channel' => 'ChannelController',
+	]);
+});
+
 Route::get('/home', 'HomeController@index')->name('home');
