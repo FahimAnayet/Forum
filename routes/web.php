@@ -28,7 +28,10 @@ Auth::routes();
 Route::group(['prefix' => 'forum'], function () {
 	Route::resources([
 		'channel' => 'ChannelController',
+		'problem' => 'ProblemController',
 	]);
 });
+
+Route::patch('/forum/problem/{problem}/status', 'ProblemController@status')->name('problem.status');
 
 Route::get('/home', 'HomeController@index')->name('home');
