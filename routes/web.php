@@ -24,14 +24,19 @@ Route::get('/jquery', function () {
 	return view('jquery');
 });
 
+Route::post('/ajaxRequest', 'NotificationController@jquery');
+
 Auth::routes();
 Route::group(['prefix' => 'forum'], function () {
 	Route::resources([
 		'channel' => 'ChannelController',
+		'notification' => 'NotificationController',
 		'problem' => 'ProblemController',
+		'report' => 'ReportController',
+		'like' => 'LikeController',
+		'achievement' => 'AchievementController',
 	]);
 });
-
 Route::patch('/forum/problem/{problem}/status', 'ProblemController@status')->name('problem.status');
 Route::patch('/reply/{solution}/status/{problem}', 'SolutionController@status')->name('solution.status');
 Route::post('/reply/{problem}', 'SolutionController@store')->name('post.reply');
