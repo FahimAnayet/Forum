@@ -33,5 +33,6 @@ Route::group(['prefix' => 'forum'], function () {
 });
 
 Route::patch('/forum/problem/{problem}/status', 'ProblemController@status')->name('problem.status');
-
+Route::patch('/reply/{solution}/status/{problem}', 'SolutionController@status')->name('solution.status');
+Route::post('/reply/{problem}', 'SolutionController@store')->name('post.reply');
 Route::get('/home', 'HomeController@index')->name('home');
