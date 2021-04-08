@@ -14,7 +14,7 @@
 					<form id="submit-form" action="{{route('problem.status',['id' => $problem->id])}}" method="POST" class="hidden">
 						@csrf
 						@method('PATCH')
-						<input @if($problem->open) class="btn btn-danger" value="Close" @else class="btn btn-primary" value="Open" @endif type="submit"></input>
+						<input id="altr" @if($problem->open) class="btn btn-danger" value="Close" @else class="btn btn-primary" value="Open" @endif type="submit"></input>
 					</form>
 					@endif
 				</span>
@@ -44,10 +44,10 @@
 					@method('PATCH')
 					@if($reply->isBest)
 					<div>
-						<input class="btn btn-warning" value="Revert to normal" type="submit"></input>
+						<input class="btn btn-warning" id="revert" value="Revert to normal" type="submit"></input>
 					</div>
 					@else
-					<input class="btn btn-primary" value="Make it Best" type="submit"></input>
+					<input class="btn btn-primary" id="makeBest" value="Make it Best" type="submit"></input>
 					@endif
 				</form>
 				@endif
@@ -79,7 +79,7 @@
 				<textarea name="body" class="form-control" placeholder="Anything to Say?" rows="5"></textarea>
 			</div>
 			<div class="form-group">
-				<input type="submit" value="Reply" class="btn btn-primary btn-block">
+				<input type="submit" id="reply" value="Reply" class="btn btn-primary btn-block">
 			</div>
 		</form>
 	</div>

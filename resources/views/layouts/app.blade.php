@@ -59,7 +59,7 @@
 							</a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-								<a href="{{route('chatify')}}" class="dropdown-item">
+								<a href="{{route('chatify')}}" id="message" class="dropdown-item">
 									<i class="fa fa-comments"></i> &nbsp; Messages <sup><span class="badge badge-success">2</span></sup>
 								</a>
 								<a href="#" class="dropdown-item">
