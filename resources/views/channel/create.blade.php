@@ -12,7 +12,7 @@
 					<input type="text" name="name" class="form-control">
 				</div>
 				<div class="form-group">
-					<input type="submit" value="Create" class="btn btn-block btn-primary">
+					<input id="create" type="submit" value="Create" class="btn btn-block btn-primary">
 				</div>
 			</form>
 		</div>

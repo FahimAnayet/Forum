@@ -69,7 +69,7 @@
 									<i class="fa fa-user"></i> &nbsp; Profile
 								</a>
 								<hr>
-								<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+								<a class="dropdown-item" id="logout" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
 									<span style="color: red;"><i class="fa fa-power-off"></i></span> &nbsp; {{ __('Logout') }}
 								</a>
