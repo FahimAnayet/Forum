@@ -34,7 +34,7 @@ class SolutionController extends Controller
 	{
 		if ($problem->user_id == Auth::user()->id) {
 			$solution->update(['isBest' => !$solution->isBest]);
-			return redirect()->back()->with(['temp' => 1, 'tempID' => $solution->id]);
+			return redirect()->back();
 		}
 		Session::flash('error', 'Access Denied');
 		return back();
