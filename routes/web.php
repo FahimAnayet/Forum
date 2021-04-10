@@ -32,9 +32,6 @@ Route::group(['prefix' => 'forum'], function () {
 		'channel' => 'ChannelController',
 		'notification' => 'NotificationController',
 		'problem' => 'ProblemController',
-		'report' => 'ReportController',
-		'like' => 'LikeController',
-		'achievement' => 'AchievementController',
 	]);
 });
 Route::patch('/forum/problem/{problem}/status', 'ProblemController@status')->name('problem.status');

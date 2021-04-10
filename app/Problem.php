@@ -21,18 +21,6 @@ class Problem extends Model
 	{
 		return $this->hasMany('App\Solution');
 	}
-	public function votes()
-	{
-		return $this->hasMany('App\Likes');
-	}
-	public function scopeLikes($query)
-	{
-		return $query->where('vote', 1);
-	}
-	public function scopeDislikes($query)
-	{
-		return $query->where('vote', 0);
-	}
 	public function addSolution($request)
 	{
 		return $this->solutions()->create($request);
